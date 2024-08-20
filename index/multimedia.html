@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음악</title>
+    <style>
+        
+        img{
+            width:70%;
+            height:80%;
+        }
+        td{
+            border:1px solid rgb(170, 170, 170);
+            width:30%;
+        }
+        audio{
+            width:60%;
+            height:30px;
+        }
+        span{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <td>
+            <img src="../images/shining road.jpg" alt="shiningRoad">
+            <span>술탄오브더레코드 - Shining Road</span>
+            <audio controls muted>
+                <source src="/multimedia/Shining Road.ogg"type="audio/mp3">
+            </audio>
+            <button onclick="cart1()">장바구니 담기</button>
+        </td>
+        <td>
+            <img src="../images/백예린.jpg" alt="백예린">
+            <span>백예린 - IMNYOA</span>
+            <audio controls muted>
+            <source src="/multimedia/백예린𝐈𝐦𝐧𝐲𝐨𝐚.mkv"type="audio/mp3">
+        </audio>
+        <button onclick="cart2()">장바구니 담기</button>
+        </td>
+        <td>
+            <img src="../images/버터.png" alt="shiningRoad">
+            <span>BTS - butter</span>
+            <audio controls muted>
+            <source src="/multimedia/Shining Road.ogg"type="audio/mp3">
+        </audio>
+        <button onclick="cart3()">장바구니 담기</button>
+        </td>
+    </table>
+        
+
+    <script>
+        function cart1(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('span')[0];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart2(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('span')[1];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart3(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('span')[2];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+    </script>
+    
+    
+</body>
+</html>

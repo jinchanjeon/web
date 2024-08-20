@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="mystyle.css"> 
+<style>
+     aside iframe.reg {
+            width: 100%;
+            border: none;
+            height:100%;
+        }
+        main iframe.fr{
+            border:none;
+        }
+</style>
+</head>
+<body>
+    <header>
+        shopping
+        
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="./home.html" target="contentFrame">home</a></li>
+            <li><a href="./shoppingabout.html"  target="contentFrame">shopping about</a></li>
+            <li><a href="./news.html"  target="contentFrame">news</a></li>
+            <li><a href="./myaccount.html"  target="contentFrame">my account</a></li>
+            <li><a href="./contacts.html"  target="contentFrame">contacts</a></li>              
+        </ul>
+    </nav>
+
+    <aside>
+        <span>카테고리</span>
+  
+        <ul class="side">
+            <li><a href="./goods.html"  target="contentFrame">아이스크림</a></li>
+            <li><a href="./shirt.html"  target="contentFrame">의류</a></li>
+            <li><a href="./multimedia.html"  target="contentFrame">음악</a></li>
+            <li><a href="./movie.html" target="contentFrame">영화</a></li>
+           
+        </ul>
+
+    </aside>
+
+    <main>
+        <iframe title="홈" class= "fr" name="contentFrame" src="./home.html"></iframe>
+    </main>
+
+    <aside>
+        <iframe title="회원가입"class="reg" height=300px;  src="./register.html" frameborder="0"></iframe>
+    </aside>
+
+    <footer>
+        <a href="//www.github.com/jinchanjeon">Copyright (c) 2024 chantleman</a>
+    </footer>
+</body>
+</html>

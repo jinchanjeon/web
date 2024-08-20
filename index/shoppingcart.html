@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>쇼핑카트</title>
+    <style>
+        table {
+            width: 100%;
+
+        }
+
+        td,
+        th {
+            border: 1px solid lightgray;
+            width: 30%;
+            height: 100%;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="cart">
+    <table>
+        <tr>
+            <td>품목</td>
+            <td>가격</td>
+            <td>수량</td>
+            <td>합계</td>
+        </tr>
+        <tr>
+            <td>아이스크림</td>
+            <td>2,000원</td>
+            <td><input class="cnt"type="number" value="0"></td>
+            <td><input class="sum" type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>의류</td>
+            <td>50,000원</td>
+            <td><input class="cnt"type="number" value="0"></td>
+            <td><input class="sum"type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>음악</td>
+            <td>3,000원</td>
+            <td><input  class="cnt"type="number" value="0"></td>
+            <td><input class="sum" type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>영화</td>
+            <td>6,000원</td>
+            <td><input class="cnt" type="number" value="0"></td>
+            <td><input class="sum" type="number" value="0"></td>
+        </tr>
+
+    </table>
+    <div class="btn">
+        <button type="button" onclick="f_cal()">계산</button>
+        <button type="reset">초기화</button>
+    </div>
+</form>
+   
+
+    <script>
+            function f_cal() {
+
+            var rows = document.querySelectorAll('table tr');
+            console.log(rows);
+            var totalAmount = 0;
+            
+            for (var i = 1; i < rows.length; i++) { 
+                var cells = rows[i].getElementsByTagName('td');
+                var cost = parseInt(cells[1].innerHTML.replace(",","").replace("원",""));
+                var quantity= cells[2].getElementsByTagName('input')[0].value;
+                var total = cost * quantity;
+                cells[3].getElementsByTagName('input')[0].value=total;
+                totalAmount+=total;
+                
+                
+        }
+        alert("총"+totalAmount+"원 입니다.");
+                
+    }
+
+        
+     
+    </script>
+
+</body>
+
+</html>

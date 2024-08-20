@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>영화</title>
+<style>
+    img{
+            width:80%;           
+            margin:15x;
+            height:100%;
+            cursor: pointer;
+        }
+        table{
+            width:100%;
+            
+        }
+        td,tr{
+            /* border:1px solid lightgray; */
+            width:30%;
+            height:200px;
+        }
+        td{
+            text-align: center;
+        }
+        iframe{
+            width: 400px;
+            height: 230px;
+            /* display: none;  */
+            /* border: none;  */
+        }
+</style>
+</head>
+<body>
+    <iframe src="" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen target="a">
+    </iframe>
+
+
+
+    <table>
+        <tr >
+            <td>
+                <span>주토피아</span>
+                <img src="../images/주토피아.webp" alt ="주토피아" name="a" data-src="https://www.youtube.com/embed/K4OJXmoakF4">
+                <button onclick="cart1()">장바구니 담기</button>
+            </td>
+            <td>
+                <span>인사이드아웃</span>
+                <img src="../images/인사이드아웃.webp" alt ="인사이드아웃" name="a" data-src="https://www.youtube.com/embed/1KGZtWbZtq8">
+                <button onclick="cart2()">장바구니 담기</button>
+            </td>
+            <td>
+                <span>인크레더블</span>
+                <img src="../images/인크레더블.webp" alt ="인크레더블" name="a" data-src="https://www.youtube.com/embed/zON6Mu9_PC0">
+                <button onclick="cart3()">장바구니 담기</button>
+            </td>
+        </tr>
+      
+    </table>
+
+    <script>
+          let v_btn = document.getElementsByTagName('img')[0];
+          v_btn.addEventListener('click',function(){
+            const iframe=document.getElementsByTagName('iframe')[0];
+            iframe.src=v_btn.getAttribute('data-src');
+            console.log(v_btn.getAttribute('data-src'));
+
+        });
+
+        let v_btn2 = document.getElementsByTagName('img')[1];
+          v_btn2.addEventListener('click',function(){
+            const iframe=document.getElementsByTagName('iframe')[0];
+            iframe.src=v_btn2.getAttribute('data-src');
+            console.log(v_btn2.getAttribute('data-src'));
+
+        });
+
+        let v_btn3 = document.getElementsByTagName('img')[2];
+          v_btn3.addEventListener('click',function(){
+            const iframe=document.getElementsByTagName('iframe')[0];
+            iframe.src=v_btn3.getAttribute('data-src');
+            console.log(v_btn3.getAttribute('data-src'));
+
+        });
+        function cart1(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('span')[0];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart2(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('span')[1];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart3(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('span')[2];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+    </script>
+</body>
+</html>

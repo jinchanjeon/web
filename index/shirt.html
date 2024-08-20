@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>의류</title>
+<style>
+    img{
+            width:100%;           
+            margin:15x;
+            height:300px;
+        }
+        table{
+            width:100%;
+            
+        }
+        td,th{
+            border:1px solid lightgray;
+            width:30%;
+            height:100px;
+        }
+        td{
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+    <table>
+        <tr >
+            <td><img src="../images/sktlk.jpg" alt="나시"></td>
+            <td><img src="../images/후디.jpg" alt="후디"></td>
+            <td><img src="../images/가방.jpg" alt="가방"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>슬리브리스</p>
+                <button onclick="cart1()">장바구니 담기</button>
+            </td>
+            <td>
+                <p>후디</p>
+                <button onclick="cart2()">장바구니 담기</button>
+            </td>
+            <td>
+                <p>백팩</p>
+                <button onclick="cart3()">장바구니 담기</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function cart1(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('p')[0];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart2(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('p')[1];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart3(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('p')[2];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+    </script>
+</body>
+</html>

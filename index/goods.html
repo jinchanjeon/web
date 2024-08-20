@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>베라</title>
+<style>
+    img{
+            width:100%;           
+            margin:15x;
+            height:300px;
+        }
+        table{
+            width:100%;
+            
+        }
+        td,th{
+            border:1px solid lightgray;
+            width:30%;
+            height:100px;
+        }
+        td{
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+    <table>
+        <tr >
+            <td><img src="../images/bara2.jpg" alt="아빠는 딸바봉"></td>
+            <td><img src="../images/bara6.webp" alt="오버더레인보우"></td>
+            <td><img src="../images/bara1.jpg" alt="피카피카피카츄"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>아빠는 딸바봉</p>
+                <button onclick="cart1()">장바구니 담기</button>
+            </td>
+            <td>
+                <p>오버더레인보우</p>
+                <button onclick="cart2()">장바구니 담기</button>
+            </td>
+            <td>
+                <p>피카피카피카츄</p>
+                <button onclick="cart3()">장바구니 담기</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function cart1(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('p')[0];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart2(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('p')[1];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+
+        function cart3(){
+            // console.log(document.getElementsByTagName('p')[0]);           
+            var str=document.getElementsByTagName('p')[2];
+            alert(str.innerText+ " 장바구니 담겼습니다.");
+            window.location.href = 'shoppingcart.html';
+        }
+    </script>
+</body>
+</html>
